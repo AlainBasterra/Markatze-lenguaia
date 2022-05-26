@@ -1,0 +1,45 @@
+#menua {
+    margin: auto;
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#argazkia {
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid yellow; */
+}
+
+#aukerak {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+
+.aukera {
+    display: flex;
+    width: 33.3333%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.botoia {
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.textua {
+    font-size: 20px;
+}

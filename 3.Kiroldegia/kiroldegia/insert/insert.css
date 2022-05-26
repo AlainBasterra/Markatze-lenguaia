@@ -1,0 +1,8 @@
+.image-upload>input {
+    display: none;
+}
+
+#argazkia_form {
+    height: 60px;
+    width: 60px;
+}
