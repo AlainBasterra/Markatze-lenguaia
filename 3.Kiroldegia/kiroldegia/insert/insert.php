@@ -14,6 +14,13 @@
     <div>
     <form action="./insert_post.php" method="POST" enctype="multipart/form-data">
                 <h3 class="mb-4">Erabiltzailea gehitu</h3>
+
+                <!-- Erabiltzaile izena -->
+                <div>
+                  <label>Erabiltzaile izena</label>
+                  <input type="text" name="Eizena" id="Eizena" placeholder="Erabiltzaile izena" required>
+                </div>
+
                 <!-- Izena -->
                 <div>
                   <label>Izena</label>
@@ -44,16 +51,18 @@
                         <img src="../argazkiak/argazkia_igo.png" id="argazkia_form"/>
                     </label>
 
-                    <input id="file-input" type="file" />
+                    <input id="file-input" type="file" name="img"/>
                 </div>
 
 
                 <!-- Submit  -->
 
-                <button type="submit" >Create account</button>
+                <button type="submit" >Kontua sortu</button>
 
               </form>
     </div>
 
 
-    <a href="../menua/menua.php"><p>Menura</p></a>
+    <div style="width:50px;">
+        <a href="../menua/menua.php"><p>Menura</p></a>
+    </div>
