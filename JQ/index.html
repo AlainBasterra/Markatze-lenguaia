@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+        
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <dialog id="dialog" open>
+        <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+        <button onclick="dialog.close();">Okay</button>
+    </dialog>
+
+
+
+
+
+
+
+
+    <table BORDER="1">
+        <form onsubmit="miFuncion();" action="form_post.php" method="post">
+            <tr>
+                <td>Izena:</td>
+                <td><input id="izena" type="text" name="izena" maxlength="20" style="border-radius: 5px;border:none;"></td>
+            </tr>
+            <tr>
+                <td>Adina:</td>
+                <td><input id="adina" type="text" name="adina" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td>Kontaktu mota:</td>
+                <td>
+                    <select id="select" name="kontaktuMota" required>
+                        <option value="">Aukeratu</option>
+                        <option value="1">Kontaktu komertziala</option>
+                        <option value="2">Bezeroari arreta</option>
+                        <option value="3">Hornitzailearekin kontaktua</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>DNI:</td>
+                <td><input id="dni" type="text" name="dni" maxlength="9" minlength="9" pattern="[0-9]{8}[A-Z]{1}" title="DNI" required></td>
+            </tr>
+            <tr>
+                <td ALIGN="center" COLSPAN="2">
+                    <input value="Bidali" type="submit">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <!-- <script>
+        function miFuncion() {
+            var izena = $("#izena").val();
+            var adina = parseInt(document.getElementById("#adina"));
+            alert(adina);
+            event.preventDefault();
+            if (izena === "") {
+                alert("Zure izena idatzi mesedez");
+                event.preventDefault();
+            } else {
+                if (adina === "") {
+                    alert("Bete adina");
+                    event.preventDefault();
+                } else {
+                    if (adina.isInteger()) {
+                        if (adina < 18) {
+                            alert("tuputamadre");
+                            event.preventDefault();
+                        } else {
+                            alert("ondo mutiko");
+                            event.preventDefault();
+                        }
+                    } else {
+                        alert("ZENBAKI BAT SARTUUUUUUUUUUUUUUUUUUUUUUU!!!!!!!!!!!!!!!!!");
+                        event.preventDefault();
+                    }
+                }
+            }
+            event.preventDefault();
+        };
+    </script> -->
+    <script>
+        function miFuncion() {
+            var select = document.getElementById('select');
+            var value = select.options[select.selectedIndex].value;
+            alert(value);
+            event.preventDefault();
+            if (value == "1") {
+                alert("666666666");
+            } else if (value == "2") {
+                alert("777777777");
+            } else {
+                alert("888888888");
+            }
+            event.preventDefault();
+        };
+    </script>
+
+    <h2>Accordion</h2>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
