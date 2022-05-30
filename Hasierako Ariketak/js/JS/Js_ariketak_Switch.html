@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<HTMl>
+    <head>
+        <script type="text/javascript">
+            function eragiketak(){
+                var zenbakia1=document.getElementById("Zenbakia1").value;
+                var zenbakia2=document.getElementById("Zenbakia2").value;
+                
+                document.getElementById("Kenketa").window.alert="<h1>Zure kenketaren emaitza zera da: "+(parseInt(zenbakia1)-parseInt(zenbakia2))+" </h1>";
+                document.getElementById("Biderketa").window.alert="<h1>Zure biderketaren emaitza zera da: "+(parseInt(zenbakia1)*parseInt(zenbakia2))+" </h1>";
+                document.getElementById("Zatiketa").window.alert="<h1>Zure zatiketaren emaitza zera da: "+(parseInt(zenbakia1)/parseInt(zenbakia2))+" </h1>";
+                document.getElementById("Berreketa").window.alert="<h1>Zure Berreketaren emaitza zera da: "+(parseInt(zenbakia1)**parseInt(zenbakia2))+" </h1>";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="Zenbakia1" placeholder="Idatzi zenbaki bat">
+        <input type="text" id="Zenbakia2" placeholder="Idatzi beste zenbaki bat">
+        <input type="button" value="Bidali" onclick="eragiketak()">
+        <div id="Kenketa"></div>
+        <div id="Biderketa"></div>
+        <div id="Zatiketa"></div>
+        <div id="Berreketa"></div>
+    </body>
+</HTMl>

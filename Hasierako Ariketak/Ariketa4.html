@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HTMl>
+
+<head>
+
+</head>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        alert("Kalkulagailua");
+        var zenbakia1 = parseInt(prompt("Sartu zenbaki bat"));
+        var zenbakia2 = parseInt(prompt("Sartu bigarren zenbaki bat"));
+        var aukera = parseInt(prompt("Aukeratu operazio bat (idatzi zenbakia)\n1.-Batuketa\n2.-Kenketa\n3.-Biderketa\n4.-Zatiketa"));
+        switch (aukera) {
+            case 1:
+                emaitza = zenbakia1 + zenbakia2;
+                break;
+            case 2:
+                emaitza = zenbakia1 - zenbakia2;
+                break;
+            case 3:
+                emaitza = zenbakia1 * zenbakia2;
+                break;
+            case 4:
+                emaitza = zenbakia1 / zenbakia2;
+                break;
+            default:
+                alert("Sartutako zenbakia ez da egokia");
+                window.location.reload();
+        }
+        document.getElementById("demo").innerHTML = "Emaitza: " + emaitza;
+    </script>
+</body>
+
+</HTMl>

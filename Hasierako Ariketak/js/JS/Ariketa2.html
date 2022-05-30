@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<HTMl>
+    <head>
+        <script type="text/javascript">
+            function gehitu(){
+                var zenbakia1=document.getElementById("Zenbakia1").value;
+                var zenbakia2=document.getElementById("Zenbakia2").value;
+                document.getElementById("Emaitza").innerHTML="<h1>Zure emaitza zera da: "+(parseInt(zenbakia1)+parseInt(zenbakia2))+" </h1>";
+
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="Zenbakia1" placeholder="Idatzi zenbaki bat">
+        <input type="text" id="Zenbakia2" placeholder="Idatzi beste zenbaki bat">
+        <input type="button" value="Bidali" onclick="gehitu()">
+        <div id="Emaitza"></div>
+    </body>
+</HTMl>

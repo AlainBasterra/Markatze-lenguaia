@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function idatzi() {
+            var izena = document.getElementById("izena").value;
+            var abizena = document.getElementById("abizena").value;
+            document.getElementById("Kaixo").innerhtml = "<h1>Zu " + izena + " " + abizena + " deitzen zara</h1>";
+        }
+    </script>
+</head>
+
+<body>
+    <div style="display: flex;">
+        <input type="text" id="izena" placeholder="Idatzi zure izena">
+        <input type="button" id="izenaBotoia" value="Bidali" onclick="document.getElementById('izena').style.display='none', document.getElementById('izenaBotoia').style.display='none', document.getElementById('abizena').style.display='block', document.getElementById('abizenaBotoia').style.display='block'">
+        <input type="text" id="abizena" placeholder="Idatzi zure abizena" style="display: none;">
+        <input type="button" id="abizenaBotoia" value="Bidali" onclick="document.getElementById('abizena').style.display='none', document.getElementById('abizenaBotoia').style.display='none',idatzi()" style="display: none;">
+    </div>
+
+
+
+    <div id="Kaixo"></div>
+
+
+
+
+</body>
+
+</html>

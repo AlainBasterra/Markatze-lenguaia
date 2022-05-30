@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Green Pasture 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20132402
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Green Pasture by FCT</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Abel|Satisfy' rel='stylesheet' type='text/css' />
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" /> -->
+    <link rel="stylesheet" href="./Scripts/JQuery.css" />
+
+    <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
+    <script src="./Scripts/JQuery-ui.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+    <script src="./Scripts/JQuery3-6.js"></script>
+
+
+
+
+
+
+    <script>
+        $(function() {
+            $("#datepicker").datepicker();
+        });
+    </script>
+
+
+
+
+    <!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <!-- <script>
+        jQuery.datepicker.regional['eu'] = {
+            closeText: 'Egina',
+            prevText: '<Aur',
+            nextText: 'Hur>',
+            currentText: 'Gaur',
+            monthNames: ['Urtarrila', 'Otsaila', 'Martxoa', 'Apirila', 'Maiatza', 'Ekaina',
+                'Uztaila', 'Abuztua', 'Iraila', 'Urria', 'Azaroa', 'Abendua'
+            ],
+            monthNamesShort: ['Urt', 'Ots', 'Mar', 'Api', 'Mai', 'Eka',
+                'Uzt', 'Abu', 'Ira', 'Urr', 'Aza', 'Abe'
+            ],
+            dayNames: ['Igandea', 'Astelehena', 'Asteartea', 'Asteazkena', 'Osteguna', 'Ostirala', 'Larunbata'],
+            dayNamesShort: ['Iga', 'Ast', 'Ast', 'Ast', 'Ost', 'Ost', 'Lar'],
+            dayNamesMin: ['Ig', 'As', 'As', 'As', 'Os', 'Os', 'La'],
+            dateFormat: 'yy/mm/dd',
+            firstDay: 1,
+            isRTL: false
+        };
+        $.datepicker.setDefaults($.datepicker.regional['eu']);
+        $(function() {
+            $("#JaiotzeData").datepicker();
+        });
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $("#confirm_password").on('keyup', function() {
+                var password = $("#password").val();
+                var confirmPassword = $("#confirm_password").val();
+                if (password != confirmPassword) {
+                    $("#CheckPasswordMatch").html("Password does not match !").css("color", "red");
+                    document.querySelector('#signupbutton').disabled = true;
+                } else {
+                    $("#CheckPasswordMatch").html("Password match !").css("color", "green");
+                    document.querySelector('#signupbutton').disabled = false;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header-wrapper">
+        <div id="header">
+            <div id="logo">
+                <h1><a href="#">Green Pasture</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="current_page_item"><a href="#" accesskey="1" title="">Sartu zure datuak</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="img-border">
+            <a href="#"><img src="images/header-img.jpg" width="1120" height="500" alt="" /></a>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <div id="page">
+                <div id="wide-content">
+                    <div>
+                        <h2>Sartu zure datuak:</h2>
+                        <form action="/action_page.php">
+                            <label for="username">Izena:</label>
+                            <input type="text" id="username" name="username" pattern="[A-Za-z]{1,}" title="Izena zenbakirik gabe" required>
+                            <br>
+                            <label for="username">Abizena:</label>
+                            <input type="text" id="username" name="username" pattern="[A-Za-z]{1,}" title="Abizena zenbakirik gabe" required>
+                            <br>
+                            <label for="JaiotzeData">Jaiotze data:</label>
+                            <input type="text" id="datepicker">
+                            <br>
+                            <label for="username">Username:</label>
+                            <input type="password" id="username" name="password" required>
+                            <br>
+
+
+
+                            <!-- Password -->
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" required name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                            </div>
+
+                            <!-- Password -->
+                            <div>
+                                <label for="conpassword">Confirm password</label>
+                                <input type="password" required id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                            </div>
+
+
+                            <div style="margin-top: 7px;" id="CheckPasswordMatch"></div>
+
+
+
+                            <button type="submit" class="btn btn-success bidali" id="signupbutton" disabled>Bidali</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page" class="container">
+            <div id="content">
+                <div>
+                    <ul class="style1">
+                        <li class="first">
+                            <h3>Lorem ipsum dolor interdum</h3>
+                            <p>Ut vel nisl tristique justo ornare iaculis. Suspendisse suscipit, orci ac interdum viverra, nulla orci facilisis mi, a ultrices mi lectus vitae felis. Morbi suscipit adipiscing orci et blandit. Morbi a nulla ut tellus blandit
+                                placerat a quis eros.</p>
+                            <p><a href="#" class="button-style">Read More</a></p>
+                        </li>
+                        <li>
+                            <h3>Magna phasellus etiam ultrices</h3>
+                            <p>Ut vel nisl tristique justo ornare iaculis. Suspendisse suscipit, orci ac interdum viverra, nulla orci facilisis mi, a ultrices mi lectus vitae felis. Morbi suscipit adipiscing orci et blandit. Morbi a nulla ut tellus blandit
+                                placerat a quis eros.</p>
+                            <p><a href="#" class="button-style">Read More</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sidebar">
+                <h2>Fusce ultrices</h2>
+                <ul class="style3">
+                    <li class="first">
+                        <p class="date">01-14-2013</p>
+                        <p><a href="#">Vestibulum laoreet lorem sed amet condimentum eget ultrices et mago porttitor nequese blandit.</a></p>
+                    </li>
+                    <li>
+                        <p class="date">01-13-2013</p>
+                        <p><a href="#">Vestibulum laoreet lorem sed amet condimentum eget ultrices et mago porttitor nequese blandit.</a></p>
+                    </li>
+                    <li>
+                        <p class="date">01-07-2013</p>
+                        <p><a href="#">Vestibulum laoreet lorem sed amet condimentum eget ultrices et mago porttitor nequese blandit.</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <p>Copyright (c) 2012 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org">FCT</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+    </div>
+</body>
+
+</html>
